@@ -1,6 +1,10 @@
 <####  Script to Sync the SP User Profile App with EntraID 
 Written By: Brian Dupy
 
+IMPORTANT: 
+	Microsoft.Graph keeps Delta links for a limited span of time. This must be run on a recurring schedule or you risk losing your Delta link. No error checking is built in for this as of now since it's unlikely in my scenario.
+ 		https://learn.microsoft.com/en-us/graph/delta-query-overview
+   		As of 2025-02-12: For directory objects, the limit is seven days.
 Prereqs: 
   - EntraCP installed
   - User Profile Service created successfully.
